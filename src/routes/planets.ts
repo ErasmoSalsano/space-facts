@@ -32,7 +32,7 @@ router.get("/", async (req, res) => {
 // Qui si usa prima il middleware checkAuthorization; poi, se lui usa next(), si passa al middlewarw validate
 router.post(
   "/",
-  checkAuthorization,
+  // checkAuthorization,
   validate({ body: planetSchema }),
   async (request, response) => {
     const planetData: PlanetData = request.body;
